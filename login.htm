@@ -8,6 +8,7 @@
     <title>Login | UG</title>
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/font-awesome.min.css">
+    <script src="../../../Downloads/Compressed/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/gulpfile.js"></script>
 </head>
 <body style="background-color:#EBEEEF">
         <div class=" d-flex justify-content-center align-items-center" style="margin-top: 19vh">
@@ -18,12 +19,12 @@
                     </div>
                     <h1 class="text-center">Login</h1>
 
-                    <form action="" method="post" class="form">
+                    <form method="post" class="form loginForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Enter ID eg. 10670196">
+                            <input type="text" id="id" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Enter ID eg. 10670196">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Enter Pin eg. **********">
+                            <input type="password" id="pin" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Enter Pin eg. **********">
                         </div>
                         <button type="submit" class="btn btn-block btn-primary">Sign In <i class="fa fa-arrow-circle-right"></i></button>
                     </form>
@@ -33,8 +34,11 @@
 
 
 
-<script src="./public/js/jquery-3.4.1.min.js"></script>
-<script src="./public/js/popper.min.js"></script>
-<script src="./public/js/bootstrap.min.js"></script>
+        <script src="./public/js/jquery-3.4.1.min.js"></script>
+        <script src="./public/js/popper.min.js"></script>
+        <script src="./public/js/bootstrap-notify.js"></script>
+        <script src="./public/js/bootstrap.min.js"></script>
+
+        <script src="./public/js/Pages/login.js"></script>
 </body>
 </html>

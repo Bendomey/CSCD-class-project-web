@@ -10,25 +10,29 @@
     <link rel="stylesheet" href="./public/css/font-awesome.min.css">
 </head>
 <body style="background-color:#EBEEEF">
-<div class="d-flex justify-content-center align-content-center mt-5">
+<div class="d-flex justify-content-center align-content-center mt-3">
     <div class="card mb-3" style="border-radius: 10px; border-color: transparent">
-            <img src="./public/images/back.jpeg" alt="" class="card-img" height="150" >
-            <h3 class="text-center">Register</h3>
+        <div class="position-relative">
+            <img src="./public/images/back.jpg" alt="" class="card-img" style="border-radius: 10px 10px 0 0;" height="150" >
+            <div class="position-absolute" style="top:9vh; left: 38%">
+                <h1 class="text-center text-white" style="font-weight: normal">Register</h1>
+            </div>
+        </div>
         <div class="card-body">
-            <form action="" method="post" class="form">
+            <form method="post" class="form registerForm">
                 <div class="form-group row">
                     <div class="col col-lg-6">
                         <label for="firstName" >First name</label>
-                        <input type="text" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Name eg. 10670196">
+                        <input type="text" class="form-control" id="first_name" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="First Name eg. John">
                     </div>
                     <div class="col col-lg-6">
                         <label for="firstName" >Last name</label>
-                        <input type="text" class="form-control" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Name eg. 10670196">
+                        <input type="text" class="form-control" id="last_name" style="border:none; border-bottom: 1px solid #B2B2B2" placeholder="Last Name eg. Doe">
                     </div>
                 </div>
                 <div class="form-group ">
                     <label for="gender" >Gender</label>
-                    <select name="" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" id="">
+                    <select name="" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" id="gender">
                         <option value="">Please Choose</option>
                         <option value="m">Male</option>
                         <option value="f">Female</option>
@@ -36,15 +40,24 @@
                 </div>
                 <div class="form-group">
                     <label for="dob">DOB</label>
-                    <input type="date" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" placeholder="Pin eg. **********">
+                    <input type="date" style="border:none; border-bottom: 1px solid #B2B2B2" id="dob" class="form-control" placeholder="Pin eg. **********">
                 </div>
                 <div class="form-group ">
-                    <label for="course" >Course</label>
-                    <select name="" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" id="">
+                    <label for="userType" >User Type</label>
+                    <select name="" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" id="userType">
+                        <option value="">Please Choose</option>
+                        <option value="admin">Admin</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <div class="form-group departmentBlock" hidden>
+                    <label for="department" >Department</label>
+                    <select name="" style="border:none; border-bottom: 1px solid #B2B2B2" class="form-control" id="department">
                         <option value="">Please Choose</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-block btn-primary">Sign Up <i class="fa fa-lock"></i></button>
+                <a href="admin_dashboard.htm" class="btn btn-block btn-link">Go Back</a>
             </form>
         </div>
     </div>
@@ -54,6 +67,9 @@
 
 <script src="./public/js/jquery-3.4.1.min.js"></script>
 <script src="./public/js/popper.min.js"></script>
+<script src="./public/js/bootstrap-notify.js"></script>
 <script src="./public/js/bootstrap.min.js"></script>
+
+<script src="./public/js/Pages/register.js"></script>
 </body>
 </html>
